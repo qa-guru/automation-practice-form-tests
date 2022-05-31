@@ -31,7 +31,8 @@ public class RegistrationFormTests extends TestBase {
             $(".react-datepicker__month-select").selectOption("July");
             $(".react-datepicker__year-select").selectOption("2008");
             $(".react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
-            $("#subjectsInput").setValue("Math").pressEnter();
+            $("#subjectsInput").sendKeys("Math");
+            $("#subjectsInput").pressEnter();
             $("#hobbiesWrapper").$(byText("Sports")).click();
             $("#uploadPicture").uploadFromClasspath("img/1.png");
             $("#currentAddress").setValue("Some street 1");
